@@ -36,8 +36,8 @@ async function transliterate(text) {
 }
 
 async function process_file(category) {
-    const inputPath = path.join(__dirname, `./data/cleaned/${category}.txt`);
-    const outputPath = path.join(__dirname, `./data/transliterate/${category}.txt`);
+    const inputPath = path.join(__dirname, `./data/cleaned/${category}_clean.txt`);
+    const outputPath = path.join(__dirname, `./data/transliterate/${category}_dev.txt`);
 
     try {
         const data = await fs.readFile(inputPath, { encoding: 'utf-8' });
@@ -100,7 +100,7 @@ function is_Roman(word) {
 }
 
 async function code_mix(category) {
-    const input_path = path.join(__dirname, `./data/cleaned/${category}.txt`);
+    const input_path = path.join(__dirname, `./data/cleaned/${category}_clean.txt`);
 
     try {
         const data = await fs.readFile(input_path, 'utf-8');
@@ -116,7 +116,7 @@ async function code_mix(category) {
         const percentage = ((mix_count / unique_words.size) * 100).toFixed(2);
 
         console.log(`analytics      [${category}]`);
-        console.log(`   Total Vocabulary: ${unique_words.size}`);
+        console.log(`   Total unique words: ${unique_words.size}`);
         console.log(`   Code-Mixed Words: ${mix_count}`);
         console.log(`   Code-Mixed %     : ${percentage}%\n`);
     } catch (err) {

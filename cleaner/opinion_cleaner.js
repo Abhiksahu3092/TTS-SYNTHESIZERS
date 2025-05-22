@@ -5,7 +5,7 @@ const phoneregex = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9,12}$/g;
 const streetregex = /\d{1,3}\s+\w+\s+(road|street|lane|marg|nagar|sector|block)/gi;
 const noiseSymbolsRegex = /[_\-\.]{3,}/g;
 
-const raw_data = fs.readFileSync('../data/raw/opinion.txt', 'utf8');
+const raw_data = fs.readFileSync('../data/raw/opinion_raw.txt', 'utf8');
 
 const all_sentences = raw_data
   .split('।')
@@ -29,5 +29,5 @@ for (let sentence of all_sentences) {
   }
 }
 
-fs.writeFileSync('../data/cleaned/opinion.txt', cleaned.join('।\n'), 'utf8');
-fs.writeFileSync('../data/junk/opinion.txt', junk.join('।\n'), 'utf8');
+fs.writeFileSync('../data/cleaned/opinion_clean.txt', cleaned.join('।\n'), 'utf8');
+fs.writeFileSync('../data/junk/opinion_junk.txt', junk.join('।\n'), 'utf8');

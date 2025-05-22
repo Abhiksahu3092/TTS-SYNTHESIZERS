@@ -30,7 +30,7 @@ async function scrape() {
                 .get()
                 .join('\n');
 
-            fs.appendFileSync('../data/raw/opinion.txt', content + '\n');
+            fs.appendFileSync('../data/raw/opinion_raw.txt', content + '\n');
         }
 
     } catch (err) {

@@ -32,7 +32,7 @@ async function scrape() {
                 .get()
                 .join('\n');
 
-            fs.appendFileSync('../data/raw/tech.txt', content + '\n');
+            fs.appendFileSync('../data/raw/tech_raw.txt', content + '\n');
         }
 
     } catch (err) {

@@ -29,5 +29,5 @@ for (let sentence of all_sentences) {
   }
 }
 
-fs.writeFileSync('../data/cleaned/tech.txt', cleaned.join('।\n'), 'utf8');
-fs.writeFileSync('../data/junk/tech.txt', junk.join('।\n'), 'utf8');
+fs.writeFileSync('../data/cleaned/tech_clean.txt', cleaned.join('।\n'), 'utf8');
+fs.writeFileSync('../data/junk/tech_junk.txt', junk.join('।\n'), 'utf8');
