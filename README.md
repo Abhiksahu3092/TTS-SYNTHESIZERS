@@ -39,19 +39,16 @@ This project involves mining and analyzing Hindi-language newspaper content acro
 1. Data mining - \
     (i). Scraping hindi newspaper( Bhaskar) for 3 major category i.e Sports, technology and opinion articles.\
     (ii). Saved the raw data in subdirectory "raw" inside the parent directory "data"\
-\
 2. Data cleaning -\
     (i). Split sentences using । (poorna-viram) as a delimiter.\
     (ii). Preserved all other punctuation (commas, exclamations, etc.)\
     (iii). Applied regex filters to:\
-        (i). Replace web URLs with the word "website"\
-        (ii). Remove sentences with phone numbers or junk (e.g., street addresses)\
-        (iii). Saved the cleaned data in subdirectory "cleaned" and junk data in subidirectory "junk" inside the parent directory "data"\
-\
+        (a). Replace web URLs with the word "website"\
+        (b). Remove sentences with phone numbers or junk (e.g., street addresses)\
+        (c). Saved the cleaned data in subdirectory "cleaned" and junk data in subidirectory "junk" inside the parent directory "data"\
 3. Transliteration (Roman → Devanagari) - \
     (i). Used OpenRouter API with a free LLaMA model\
     (ii). Transliterated roman sentences into Devanagari script\
-\
 4. Code-Mixing Estimation -\
     (i). After transliteration, we calculated the percentage of Roman-script (code-mixed) words in each sentence before conversion.\
     (ii). Various analytics such as percentage of code-mixing, no. of unique words and code-mixed words will be available in terminal while running the script\
