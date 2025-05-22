@@ -96,7 +96,7 @@ This project involves mining and analyzing Hindi-language newspaper content acro
 ### 2. 📦 Install Dependencies
 
 ```bash
-npm install axios dotenv
+npm install axios dotenv node fs cheerio path
 ```
 
 ### 3. Create a .env file in the root directory
