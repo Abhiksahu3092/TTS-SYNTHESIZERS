@@ -31,7 +31,7 @@ async function scrape() {
                 .get()
                 .join('\n');
 
-            fs.appendFileSync('../data/raw/sports.txt', content + '\n\n');
+            fs.appendFileSync('../data/raw/sports.txt', content + '\n');
         }
 
     } catch (err) {
