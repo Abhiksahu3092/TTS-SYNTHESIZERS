@@ -2,6 +2,7 @@
 
 This project involves mining and analyzing Hindi-language newspaper content across three categories: sports, technology, and opinion. It focuses on sentence extraction, basic text cleaning, transliteration, and estimating code-mixing levels.
 
+```bash
 ## Project Structure
 ├── cleaner/
 │   ├── opinion_cleaner.js       
@@ -32,3 +33,4 @@ This project involves mining and analyzing Hindi-language newspaper content acro
 ├── open_router.js
 ├── data.zip 
 └── README.md
+```
