@@ -35,22 +35,55 @@ This project involves mining and analyzing Hindi-language newspaper content acro
 └── README.md
 ```
 
-## Tasks Completed
-1. Data mining - <br>
-    (i). Scraping hindi newspaper( Bhaskar) for 3 major category i.e Sports, technology and opinion articles.<br>
-    (ii). Saved the raw data in subdirectory "raw" inside the parent directory "data"<br>
-<br>
-2. Data cleaning -<br>
-    (i). Split sentences using । (poorna-viram) as a delimiter.<br>
-    (ii). Preserved all other punctuation (commas, exclamations, etc.)<br>
-    (iii). Applied regex filters to:<br>
-        (a). Replace web URLs with the word "website"<br>
-        (b). Remove sentences with phone numbers or junk (e.g., street addresses)<br>
-        (c). Saved the cleaned data in subdirectory "cleaned" and junk data in subidirectory "junk" inside the parent directory "data"<br>
-<br>
-3. Transliteration (Roman → Devanagari) - <br>
-    (i). Used OpenRouter API with a free LLaMA model<br>
-    (ii). Transliterated roman sentences into Devanagari script<br>
-4. Code-Mixing Estimation -<br>
-    (i). After transliteration, we calculated the percentage of Roman-script (code-mixed) words in each sentence before conversion.<br>
-    (ii). Various analytics such as percentage of code-mixing, no. of unique words and code-mixed words will be available in terminal while running the script<br>
+## 📌 Project Workflow
+
+### 1. 📰 Data Mining
+
+- **Source:** Scraped Hindi newspaper (Dainik Bhaskar) for three major categories:
+  - Sports
+  - Technology
+  - Opinion articles
+- **Storage:** Saved raw data in the subdirectory `data/raw/`:
+  - `sports_raw.txt`
+  - `tech_raw.txt`
+  - `opinion_raw.txt`
+
+---
+
+### 2. 🧹 Data Cleaning
+
+- **Sentence Splitting:** 
+  - Used `।` (Poorna-Viram) as the delimiter to split sentences.
+- **Punctuation Handling:** 
+  - Preserved other punctuation like commas, exclamation marks, semi-colons, etc.
+- **Regex Filters Applied:**
+  - Replaced web URLs with the word **`website`**
+  - Removed sentences with:
+    - Long phone numbers
+    - Junk data (e.g., street addresses)
+- **Storage:**
+  - Cleaned data → `data/cleaned/`
+  - Junk sentences → `data/junk/`
+
+---
+
+### 3. 🔤 Transliteration (Roman → Devanagari)
+
+- **Model Used:** Free LLaMA model via **OpenRouter API**
+- **Script:** `open_router.js`
+- **Functionality:** 
+  - Transliterates Roman-script Hindi to Devanagari
+  - Outputs saved to `data/transliterate/`
+
+---
+
+### 4. 🔎 Code-Mixing Estimation
+
+- **Approach:**
+  - Before transliteration, calculated the percentage of Roman-script (code-mixed) words per sentence.
+- **Analytics Output:**
+  - Percentage of code-mixed words
+  - Total vs unique vocabulary size
+  - Total code-mixed words
+- **Visibility:** 
+  - Displayed in terminal during script execution
