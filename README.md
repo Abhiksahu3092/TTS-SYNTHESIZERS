@@ -87,3 +87,40 @@ This project involves mining and analyzing Hindi-language newspaper content acro
   - Total code-mixed words
 - **Visibility:** 
   - Displayed in terminal during script execution
+
+
+## 🚀 How to Run the Pipeline
+
+### 1. 📦 Install Dependencies
+
+```bash
+npm install axios dotenv
+```
+
+## Create a .env file in the root directory
+```bash
+OPENROUTER_API_KEY=your_api_key_here
+```
+
+## 📰 Scrape Data
+```bash
+cd scrapper
+node opinion_scrapper.js
+node sports_scrapper.js
+node tech_scrapper.js
+cd ..
+```
+
+## 🧹 Clean the Data
+```bash
+cd cleaner
+node opinion_cleaner.js
+node sports_cleaner.js
+node tech_cleaner.js
+cd ..
+```
+
+## 🔤 Transliterate Using LLaMA via OpenRouter
+```bash
+node open_router.js
+```
