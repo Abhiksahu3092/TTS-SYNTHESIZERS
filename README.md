@@ -97,12 +97,12 @@ This project involves mining and analyzing Hindi-language newspaper content acro
 npm install axios dotenv
 ```
 
-## Create a .env file in the root directory
+## 2. Create a .env file in the root directory
 ```bash
 OPENROUTER_API_KEY=your_api_key_here
 ```
 
-## 📰 Scrape Data
+## 3. 📰 Scrape Data
 ```bash
 cd scrapper
 node opinion_scrapper.js
@@ -111,7 +111,7 @@ node tech_scrapper.js
 cd ..
 ```
 
-## 🧹 Clean the Data
+## 4. 🧹 Clean the Data
 ```bash
 cd cleaner
 node opinion_cleaner.js
@@ -120,7 +120,7 @@ node tech_cleaner.js
 cd ..
 ```
 
-## 🔤 Transliterate Using LLaMA via OpenRouter
+## 5. 🔤 Transliterate Using LLaMA via OpenRouter
 ```bash
 node open_router.js
 ```
