@@ -8,8 +8,6 @@ dotenv.config();
 const OPENROUTER_API_KEY = process.env.OPEN_ROUTER_API_KEY;
 const OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions";
 const MODEL = "meta-llama/llama-3.3-8b-instruct:free";
-
-
 async function transliterate(text) {
     const prompt = `${text}`;
 
