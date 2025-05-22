@@ -91,18 +91,20 @@ This project involves mining and analyzing Hindi-language newspaper content acro
 
 ## 🚀 How to Run the Pipeline
 
-### 1. 📦 Install Dependencies
+### 1. Clone this repository into your local machine
+
+### 2. 📦 Install Dependencies
 
 ```bash
 npm install axios dotenv
 ```
 
-## 2. Create a .env file in the root directory
+### 3. Create a .env file in the root directory
 ```bash
 OPENROUTER_API_KEY=your_api_key_here
 ```
 
-## 3. 📰 Scrape Data
+### 4. 📰 Scrape Data
 ```bash
 cd scrapper
 node opinion_scrapper.js
@@ -111,7 +113,7 @@ node tech_scrapper.js
 cd ..
 ```
 
-## 4. 🧹 Clean the Data
+### 5. 🧹 Clean the Data
 ```bash
 cd cleaner
 node opinion_cleaner.js
@@ -120,7 +122,7 @@ node tech_cleaner.js
 cd ..
 ```
 
-## 5. 🔤 Transliterate Using LLaMA via OpenRouter
+### 6. 🔤 Transliterate Using LLaMA via OpenRouter
 ```bash
 node open_router.js
 ```
